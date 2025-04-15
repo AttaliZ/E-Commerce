@@ -1,14 +1,22 @@
 import React from 'react'
 import Header from './components/Header'
+import HeroSection from './components/HeroSection'
+import FeaturedProducts from './components/FeaturedProducts'
+import TeaBenefits from './components/TeaBenefits'
+import Testimonials from './components/testimonials'
+import Newsletter from './components/Newsletter'
+import Footer from './components/Footer'
 
 function App() {
   return (
     <div>
       <Header />
-      <main style={{ padding: '2rem' }}>
-        <h1>ยินดีต้อนรับสู่เว็บไซต์</h1>
-        <p>Hello world</p>
-      </main>
+      <HeroSection />
+      <FeaturedProducts />
+      <TeaBenefits />
+      <Testimonials />
+      <Newsletter />
+      <Footer />
     </div>
   )
 }

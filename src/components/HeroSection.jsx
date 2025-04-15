@@ -1,61 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../App.css';
-
-function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [cartItems, setCartItems] = useState(0);
-  
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  return (
-    <header className="header">
-      <div className="container header-container">
-        <div className="header-logo">
-          <span className="header-logo-text">TeaHaven</span>
-          <span className="header-logo-tagline">ชาคุณภาพเยี่ยม</span>
-        </div>
-        
-        <nav className={`header-nav ${isMenuOpen ? 'mobile-open' : ''}`}>
-          <ul>
-            <li><a href="#" className="header-nav-link">หน้าหลัก</a></li>
-            <li><a href="#" className="header-nav-link">สินค้า</a></li>
-            <li><a href="#" className="header-nav-link">เกี่ยวกับเรา</a></li>
-            <li><a href="#" className="header-nav-link">ติดต่อ</a></li>
-          </ul>
-        </nav>
-        
-        <div className="header-actions">
-          <button className="header-icon-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </button>
-          
-          <button className="header-icon-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-            <span className="cart-badge">{cartItems}</span>
-          </button>
-          
-          <button className="mobile-menu-btn" onClick={toggleMenu}>
-            {isMenuOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
-        </div>
-      </div>
-    </header>
-  );
-}
+import image1 from '../img/head.jpg'; 
 
 function HeroSection() {
   return (
@@ -70,8 +15,8 @@ function HeroSection() {
         </div>
         
         <div className="hero-image-container fade-in">
-          <img src="/api/placeholder/600/400" alt="ชาคุณภาพ" className="hero-image" />
-        </div>
+  <img src={image1} alt="ชาคุณภาพ" className="hero-image" />
+</div>
         
         {/* Decorative Elements */}
         <svg className="hero-leaf-decoration hero-leaf-1" width="100" height="100" viewBox="0 0 24 24" fill="currentColor">
@@ -86,4 +31,4 @@ function HeroSection() {
   );
 }
 
-export default Header;
+export default HeroSection;
